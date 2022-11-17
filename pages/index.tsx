@@ -114,7 +114,13 @@ export default function Game() {
   )
 }
 
-const Square = ({ id, setGameState, cellState }) => {
+interface SquareProps {
+  id: string,
+  setGameState: Function,
+  cellState: number
+}
+
+const Square = ({ id, setGameState, cellState }: SquareProps) => {
   const [mouseIsOver, setMouseIsOver] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
 
